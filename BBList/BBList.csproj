@@ -7,12 +7,23 @@
     <UserSecretsId>aspnet-BBList-930f8797-a1dc-4590-82ac-0740753bb8b8</UserSecretsId>
   </PropertyGroup>
 
-  <ItemGroup>
+	<Target Name="Tailwind" BeforeTargets="Build">
+		<Exec WorkingDirectory="Client" Command="npm install" Condition=" !Exists('Client/node_modules') " />
+		<Exec Command="npx @tailwindcss/cli -i ./css/tailwind.css -o ../wwwroot/css/site.css" WorkingDirectory="Client" />
+	</Target>
+	
+	<ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="10.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="10.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="10.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+  </ItemGroup>
+	
+	
 </Project>
