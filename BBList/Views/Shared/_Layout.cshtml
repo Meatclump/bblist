@@ -7,16 +7,14 @@
     <script type="importmap"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 <body class="flex min-h-screen flex-col">
     <partial name="_Header" />
-    <div class="flex flex-1 flex-col">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <main class="font-rokkit flex flex-1 flex-col">
+        @RenderBody()
+    </main>
 	<partial name="_Footer" />
     @await RenderSectionAsync("Scripts", required: false)
 </body>
