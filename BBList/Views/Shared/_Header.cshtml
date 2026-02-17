@@ -1,10 +1,16 @@
-﻿<header>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<header>
     <nav class="flex justify-between p-6">
-        <a asp-area="" asp-controller="Home" asp-action="Index">BBList</a>
-        <div class="flex gap-6">
-            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-		    <a variant="Destructive" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+        <a asp-area="" asp-controller="Home" asp-action="Index">BBList Logo Placeholder</a>
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <div class="flex gap-6">
+                <a asp-area="" asp-controller="Home" asp-action="Index">New List</a>
+            </div>
+        }
 		<partial name="_LoginPartial" />
     </nav>
 </header>
