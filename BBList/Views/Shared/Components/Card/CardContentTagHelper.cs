@@ -12,6 +12,7 @@ namespace BBList.Views.Shared.Components.Card
         {
             output.TagName = "div";
             output.Attributes.SetAttribute("data-size", Size);
+            output.Attributes.SetAttribute("data-slot", "card-content");
             output.Attributes.SetAttribute("class", "px-4 group-data-[size=sm]/card:px-3");
         }
     }

@@ -10,6 +10,7 @@ namespace BBList.Views.Shared.Components.Card
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             output.TagName = "div";
+            output.Attributes.SetAttribute("data-slot", "card-title");
             output.Attributes.SetAttribute("class", "text-base leading-snug font-medium group-data-[size=sm]/card:text-sm");
         }
     }
