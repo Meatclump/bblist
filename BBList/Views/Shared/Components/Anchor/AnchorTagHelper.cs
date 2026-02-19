@@ -46,7 +46,7 @@ namespace BBList.Views.Shared.Components.Anchor
                     classString += " bg-red-500/10 hover:bg-red-500/20 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-red-500/20 text-destructive focus-visible:border-red-500/40 dark:hover:bg-red-500/30";
                     break;
                 case AnchorType.Link:
-                    classString += " text-slate-700 underline-offset-4 hover:underline ps-0 pe-0";
+                    classString += " text-slate-700 underline-offset-4 hover:underline ps-0 pe-0 underline";
                     break;
             }
 

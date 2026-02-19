@@ -449,6 +449,9 @@
       color: color-mix(in oklab, var(--color-slate-900) 50%, transparent);
     }
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .underline-offset-4 {
     text-underline-offset: 4px;
   }
