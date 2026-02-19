@@ -183,8 +183,15 @@
   }
 }
 @layer utilities {
+  .\@container\/card-header {
+    container-type: inline-size;
+    container-name: card-header;
+  }
   .flex {
     display: flex;
+  }
+  .grid {
+    display: grid;
   }
   .inline-flex {
     display: inline-flex;
@@ -229,11 +236,17 @@
   .shrink-0 {
     flex-shrink: 0;
   }
+  .auto-rows-min {
+    grid-auto-rows: min-content;
+  }
   .flex-col {
     flex-direction: column;
   }
   .items-center {
     align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
   }
   .justify-between {
     justify-content: space-between;
@@ -270,6 +283,10 @@
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
+  }
+  .rounded-t-xl {
+    border-top-left-radius: var(--radius-xl);
+    border-top-right-radius: var(--radius-xl);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -479,6 +496,16 @@
       padding-left: calc(var(--spacing) * 3);
     }
   }
+  .has-data-\[slot\=card-action\]\:grid-cols-\[1fr_auto\] {
+    &:has(*[data-slot="card-action"]) {
+      grid-template-columns: 1fr auto;
+    }
+  }
+  .has-data-\[slot\=card-description\]\:grid-rows-\[auto_auto\] {
+    &:has(*[data-slot="card-description"]) {
+      grid-template-rows: auto auto;
+    }
+  }
   .has-data-\[slot\=card-footer\]\:pb-0 {
     &:has(*[data-slot="card-footer"]) {
       padding-bottom: calc(var(--spacing) * 0);
@@ -578,6 +605,18 @@
     & svg:not([class*='size-']) {
       width: calc(var(--spacing) * 4);
       height: calc(var(--spacing) * 4);
+    }
+  }
+  .\[\.border-b\]\:pb-4 {
+    &:is(.border-b) {
+      padding-bottom: calc(var(--spacing) * 4);
+    }
+  }
+  .group-data-\[size\=sm\]\/card\:\[\.border-b\]\:pb-3 {
+    &:is(:where(.group\/card)[data-size="sm"] *) {
+      &:is(.border-b) {
+        padding-bottom: calc(var(--spacing) * 3);
+      }
     }
   }
   .\[a\]\:hover\:bg-slate-100\/80 {
