@@ -26,12 +26,12 @@ namespace BBList.Views.Shared.Components.Anchor
             IconLg
         }
 
-        readonly string _default = "bg-primary text-primary-foreground [a]:hover:bg-primary/80";
-        readonly string _outline = "border-border bg-background hover:bg-muted hover:text-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 aria-expanded:bg-muted aria-expanded:text-foreground";
-        readonly string _secondary = "bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground";
-        readonly string _ghost = "hover:bg-muted hover:text-foreground dark:hover:bg-muted/50 aria-expanded:bg-muted aria-expanded:text-foreground";
+        readonly string _default = "bg-slate-100 text-slate-700 [a]:hover:bg-slate-100/80";
+        readonly string _outline = "border-zinc-300 hover:border-zinc-400/50 bg-white hover:bg-slate-100 hover:text-slate-900 dark:bg-slate-100/30 dark:border-slate-100 dark:hover:bg-slate-100/50 aria-expanded:bg-zinc-300 aria-expanded:text-zinc-300";
+        readonly string _secondary = "bg-slate-100 text-slate-900 hover:bg-slate-400/80 aria-expanded:bg-slate-100 aria-expanded:text-slate-900";
+        readonly string _ghost = "hover:bg-zinc-300 hover:text-slate-900 dark:hover:bg-zinc-300/50 aria-expanded:bg-zinc-300 aria-expanded:text-slate-900";
         readonly string _destructive = "bg-destructive/10 hover:bg-destructive/20 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/20 text-destructive focus-visible:border-destructive/40 dark:hover:bg-destructive/30";
-        readonly string _link = "text-primary underline-offset-4 hover:underline";
+        readonly string _link = "text-slate-100 underline-offset-4 hover:underline";
 
         readonly string _sizeDefault = "h-8 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2";
         readonly string _sizeXs = "h-6 gap-1 rounded-[min(var(--radius-md),10px)] px-2 text-xs in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3";

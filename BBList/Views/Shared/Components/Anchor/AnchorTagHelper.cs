@@ -40,7 +40,7 @@ namespace BBList.Views.Shared.Components.Anchor
                     classString += " bg-slate-100 text-slate-700 [a]:hover:bg-slate-100/80";
                     break;
                 case AnchorType.Outline:
-                    classString += " border-zinc-300 bg-transparent hover:bg-zinc-300/50 hover:text-foreground dark:bg-input/30 dark:border-zinc-300 dark:hover:bg-input/50 aria-expanded:bg-muted aria-expanded:text-foreground";
+                    classString += " border-zinc-300 bg-transparent hover:bg-zinc-300/50 hover:text-slate-900 dark:bg-slate-100/30 dark:border-zinc-300 dark:hover:bg-slate-100/50 aria-expanded:bg-muted aria-expanded:text-slate-900";
                     break;
                 case AnchorType.Destructive:
                     classString += " bg-red-500/10 hover:bg-red-500/20 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-red-500/20 text-destructive focus-visible:border-red-500/40 dark:hover:bg-red-500/30";
